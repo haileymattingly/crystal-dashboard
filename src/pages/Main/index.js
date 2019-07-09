@@ -5,8 +5,6 @@ import cx from 'classnames';
 import { setMobileNavVisibility } from '../../reducers/Layout';
 import { withRouter } from 'react-router-dom';
 
-import Header from './Header';
-import Footer from './Footer';
 import SideBar from '../../components/SideBar';
 import ThemeOptions from '../../components/ThemeOptions';
 import MobileMenu from '../../components/MobileMenu';
@@ -14,6 +12,8 @@ import MobileMenu from '../../components/MobileMenu';
  * Pages
  */
 import Dashboard from '../Dashboard';
+import Staff from '../Staff';
+import ApparelStore from '../ApparelStore';
 import Components from '../Components';
 import UserProfile from '../UserProfile';
 import MapsPage from '../MapsPage';
@@ -41,8 +41,9 @@ const Main = ({
         <SideBar />
 
         <div className="main-panel">
-          <Header />
           <Route exact path="/" component={Dashboard} />
+          <Route path="/staff" component={Staff} />
+          <Route path="/ApparelStore" component={ApparelStore} />
           <Route path="/components" component={Components} />
           <Route path="/profile" component={UserProfile} />
           <Route path="/forms" component={Forms} />
@@ -50,7 +51,6 @@ const Main = ({
           <Route path="/maps" component={MapsPage} />
           <Route path="/charts" component={Charts} />
           <Route path="/calendar" component={Calendar} />
-          <Footer />
         </div>
       </div>
     </div>

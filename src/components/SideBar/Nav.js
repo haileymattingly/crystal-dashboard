@@ -11,6 +11,18 @@ class Nav extends Component {
     let { location } = this.props;
     return (
       <ul className="nav">
+        <li className={this.isPathActive('/staff') ? 'active' : null}>
+          <Link to="/staff">
+            <i className="pe-7s-smile"></i>
+            <p>Coaching Staff</p>
+          </Link>
+        </li>
+        <li className={this.isPathActive('/apparelstore') ? 'active' : null}>
+          <Link to="/ApparelStore">
+            <i className="pe-7s-shopbag"></i>
+            <p>Apparel Store</p>
+          </Link>
+        </li>
         <li className={location.pathname === '/' ? 'active' : null}>
           <Link to="/">
             <i className="pe-7s-graph"></i>
@@ -20,7 +32,7 @@ class Nav extends Component {
         <li className={this.isPathActive('/components') || this.state.componentMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ componentMenuOpen: !this.state.componentMenuOpen })}
             data-toggle="collapse">
-            <i className="pe-7s-plugin"></i>
+            <i className="fa-chart-bar"></i>
             <p>
               Components
             <b className="caret"></b>

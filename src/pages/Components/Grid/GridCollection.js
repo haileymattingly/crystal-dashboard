@@ -2,12 +2,14 @@ import React from 'react';
 
 const GridCollection = () => (
   <div>
-    <h4 className="title">XS Grid <small>Always Horizontal</small></h4>
+    <h4 className="title">Appleton West-Kimberly Coaching Staff</h4>
     <div className="row">
       <div className="col-xs-4">
         <div className="card">
           <div className="content text-center">
-            <code>col-xs-4</code>
+            <code>col-xs-4
+              
+            </code>
           </div>
         </div>
       </div>
